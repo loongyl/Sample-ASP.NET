@@ -18,11 +18,11 @@ RUN apt install apt-transport-https -y
 
 RUN apt-get update
 
-RUN wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu-dev_67.1-7_amd64.deb
+# RUN wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu-dev_67.1-7_amd64.deb
 
-RUN dpkg -i libicu-dev_67.1-7_amd64.deb
+# RUN dpkg -i libicu-dev_67.1-7_amd64.deb
 
-RUN apt install dotnet-sdk-3.1 -y
+RUN apt install libicu-dev libicu dotnet-sdk-3.1 -y
 
 COPY ./ ./
 
